@@ -7,7 +7,7 @@ const loginGet = (req, res) => {
 
 const registerGet = (req, res) => {
     res.render('log-reg');
-};
+};                  
 
 const loginPost = async (req, res) => {
     try {

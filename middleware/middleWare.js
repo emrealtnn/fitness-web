@@ -4,25 +4,6 @@ const Formprotection = require("../models/formprotection");
 const Losingweight = require ("../models/losingweight");
 const Weightgain = require ("../models/weightgain");
 
-
-const requireAuth = (req, res, next) => {
-    const token = req.cookies.jwt;
-    // check json web token exists & is verified
-    if (token) {
-        jwt.verify(token, 'net ninja secret', (err, decodedToken) => {
-            if (err) {
-                console.log(err.message);
-                res.redirect('/log-reg');
-            } else {
-                console.log(decodedToken);
-                next();
-            }
-        });
-    } else {
-        res.redirect('/log-reg');
-    }
-};
-
 // check current user
 const checkUser = (req, res, next) => {
     const token = req.cookies.jwt;
@@ -58,4 +39,4 @@ const getData = async (req,res,next) => {
         console.log(error);
     }
 }
-module.exports = { requireAuth, checkUser, getData };
+module.exports = {checkUser, getData };

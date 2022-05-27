@@ -8,7 +8,7 @@ const perinfoRoute = require('./routes/per-infoRoute');
 const suplementRoute = require('./routes/suplementRoute');
 const trainingRoute = require('./routes/trainingRoute');
 const cookieParser = require('cookie-parser');
-const { checkUser,getData } = require('./middleware/authMiddleware');
+const { checkUser,getData } = require('./middleware/middleWare');
 const logoutRoute = require('./routes/logoutRoute');
 
 const app = express();
