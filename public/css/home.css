@@ -1,0 +1,23 @@
+.home {
+    width: 60%;
+    margin: auto;
+    margin-top: 3rem;
+    
+}
+.home h1{
+    color: #181818;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.home img{
+    width: 950px;
+    padding-top: 1rem;
+    margin: auto;
+
+}
+.home p{
+    padding-top: 1rem;
+    color: #181818;
+    font-size: 1rem;
+    text-align: center;
+}

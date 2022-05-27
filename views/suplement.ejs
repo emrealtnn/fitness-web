@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Never Give Up!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/suplement.css">
+
+</head>
+
+<body>
+    <header class="mosttop">
+       
+        <a href=""><img id="tg" src="images/telegram.png" alt=""></a>
+        <a href=""><img src="images/whatsapp.png" alt=""></a>
+        <a href=""><img src="images/twitter.png" alt=""></a>
+        <a href=""><img src="images/instagram.png" alt=""></a>
+        <a href="https://www.facebook.com/emrealtn268"><img src="images/facebook.png" alt=""></a>
+
+    </header>
+    <header class="bg-orange">
+        <nav id="navbar">
+            <img src="images/navbar-img.png" alt="No Pain No Gain">
+
+            <ul>
+                <li><a href="/"><strong>Ana Sayfa</strong></a></li>
+                <li class="dropdown" id="pro-menu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <strong>Size Özel</strong>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="training"> <strong>Antrenmanlar</strong></a>
+                      <a class="dropdown-item" href="nutrition"><strong>Beslenme</strong></a>
+                      <a class="dropdown-item" href="suplement"><strong>Suplement</strong></a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="per-info"><strong>Hesaplayıcı</strong></a>
+                </li>
+                <li> <% if(!user) { %>  <a href="log-reg" ><strong>Giriş Yap <div>veya Üye Ol</div></strong></a>
+                    <% } else { %> 
+                        <a href="logout"><strong>Çıkış Yap</strong></a>
+                        <% } %> 
+
+
+                </li>
+           <li><a href="contact"><strong>İletişim</strong></a></li>  
+        </ul>
+        </nav>
+    </header>
+
+    <div class="suppage">
+        <div class="sup">
+            <img src="images/bcaa.jpg" alt="BCAA">
+            <h2>BCAA</h2>
+            <p>BCAA olarak bilinen dallı zincirli amino asit destekleri; valin, izolösin ve lösindden oluşan, yağsız kas
+                kütlesini ve performansını arttırmak isteyen sporcular tarafından sıklıkla kullanılan gıda
+                takviyeleridir.</p>
+        </div>
+        <div class="sup">
+            <img src="images/whey-protein.png" alt="WHEY PROTEIN">
+            <h2>WHEY PROTEIN</h2>
+            <p>Whey proteini, halk dilinde ‘peynir altı suyu’ olarak bilinen ve peynir üretimi yapılırken meydana gelen
+                yan ürünlerden biridir. Fakat tükettiğimiz whey proteini, bunun çok daha filtrelenmiş, yağından
+                arındırılmış, zenginleştirilmiş halidir.</p>
+        </div>
+        <div class="sup">
+            <img src="images/creatine.png" alt="CREATINE">
+            <h2>CREATINE</h2>
+            <p>Kreatin üç farklı amino asidin yani; glisin, arjinin ve metiyoninin birleşimidir. Çoğu insan onu steroid
+                türevi olarak görse de kreatin, amino asitlerin bir kombinasyonu olduğu unutulmamalıdır.</p>
+        </div>
+        <div class="sup">
+            <img src="images/pre-workout.jpg" alt="PRE-WORKOUT">
+            <h2>PRE-WORKOUT</h2>
+            <p>Daha fazla yağ yakma, "daha hızlı toparlanma veya performanslarını en üst düzeye çıkarma" avantajını elde
+                etmek için sporcular, takviye edici pre workout ürünleri kullanmaktadır. </p>
+        </div>
+        <div class="sup">
+            <img src="images/omega3.jpg" alt="OMEGA 3 ">
+            <h2>OMEGA 3</h2>
+            <p>Omega-3 yağ asitleri, vücut için gerekli yağlardır. Bu sağlıklı yağların özellikle beyin için önemli
+                faydaları vardır. Bununla birlikte, standart bir beslenme düzeni uygulayan çoğu insan yeteri kadar
+                omega-3 alamamaktadır.</p>
+        </div>
+        <div class="sup">
+            <img src="images/glutamine.png" alt="GLUTAMINE">
+            <h2>GLUTAMINE</h2>
+            <p>Glutamin, protein elde etmek için kullanılan bir amino asittir. Kas gücü, dayanıklılık ve iyileşme süreci
+                için glutamin oldukça önemlidir. Glutamin genellikle kan dolaşımında büyük miktarlarda bulunur ve
+                nitrojen üretimine yardımcı olur.</p>
+        </div>
+        <div class="sup">
+            <img src="images/carnitine.jpg" alt="BCAA">
+            <h2>L-CARNITINE</h2>
+
+            <p>Karnitin içeren takviyeler; kilo vermeye ve atletik performansı artırmaya yardımcı olabilecek,
+                metabolizma hızlandırıcı etkiye sahip olabilecek gıdalardır. Karaciğer ve böbrekler L-karnitini iki
+                farklı amino asit olan lisin ve metioninden elde eder. </p>
+        </div>
+        <div class="sup">
+            <img src="images/arginine.jpg" alt="ARGININE">
+            <h2>ARGININE</h2>
+            <p>Arjinin, proteinlerin yapı taşları olan amino asitler içinde yer almaktadır. Amino asitler; kas gelişim
+                süreçlerinde etkin rol oynayan, özellikle sporcu diyetlerinde önemli yere sahip olan
+                bileşenlerdendir.</p>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

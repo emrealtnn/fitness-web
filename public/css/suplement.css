@@ -1,0 +1,26 @@
+
+.suppage{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    flex-wrap: wrap;
+}
+.suppage .sup{
+    margin: 1rem;
+    width: 250px;
+    text-align: center;
+    color: #181818;
+    font-size: 0.75rem;
+}
+.suppage .sup img{
+    width: 256px;
+    height: 256px;
+}
+.suppage .sup h2{
+    color: #f4511e;
+}
+.suppage .sup p  {
+    width: 256px;
+    height: 110px;
+    overflow: hidden;
+}

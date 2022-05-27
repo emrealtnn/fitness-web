@@ -1,0 +1,60 @@
+.btn-group {
+    position: relative;
+    margin: auto;
+    margin-top: 3rem; 
+    margin-left: 19.85rem;
+}
+.btn-group  button {
+  background-color: #F4511e; 
+  border: 1px solid #f2430e; 
+  color: white; /* White text */
+  margin-right: 1rem;
+  padding: 1.5rem 8rem; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  font-weight: bold;
+}
+
+.btn-group  button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+button.selected{
+  border-color: black;
+  background-color: white;
+  color: black;
+}
+.btn-group2{
+    display: inline-block;
+    width: 22%;
+    margin-top: 3rem;
+}
+.btn-group2 button {
+    background-color: #F4511e; /* Green background */
+    border: 1px solid #f2430e; /* Green border */
+    color: white; /* White text */
+    padding: 1rem; /* Some padding */
+    margin-bottom: 1rem;
+    cursor: pointer; /* Pointer/hand icon */
+    width: 88%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    margin-left: 3rem;
+    font-weight: bold;
+  }
+  
+  .btn-group2 button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group2 button:hover {
+    background-color: #f2430e;
+    color: #181818;
+  }
