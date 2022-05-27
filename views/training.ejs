@@ -69,10 +69,7 @@
             <button onclick="kardiyo()">Kardiyo Antrenmanı</button>
             <button onclick="fullbody()">Tüm Vücut Antrenmanı</button>
         </div>
-    <div>
-        
-    </div>
-
+    <div id="container"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -93,6 +90,8 @@
     $(this).addClass('selected');
 });
 
+
+
     let durum="";
     
     const kva = () => {
@@ -108,115 +107,274 @@
 
     function gogus() {
         if (durum=="kva"){
-            console.log("kilo verme gögüs")
+        let kv_data = <%- JSON.stringify(losingweight) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Göğüs Antrenman </p>
+    <pre> ${kv_data[0].gogus}</pre>
+`;    
         }
+
         else if (durum=="kaa"){
-            console.log("kilo alma gögüs")
+        let ka_data = <%- JSON.stringify(weightgain) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Göğüs Antrenman </p>
+    <pre> ${ka_data[0].gogus}</pre>
+`;    
         }
         else if(durum=="fka") {
+    let fk_data = <%- JSON.stringify(formprotection) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Form Korumaya Yönelik Göğüs Antrenman </p>
+    <pre> ${fk_data[0].gogus}</pre>
+`;    
+        }
+        else
+        alert ("Amaç Belirleyiniz...")
+    }
+//------------------------------------------------------------------
 
+function sirt() {
+        if (durum=="kva"){
+        let kv_data = <%- JSON.stringify(losingweight) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Sırt Antrenman </p>
+    <pre> ${kv_data[0].sirt}</pre>
+`;    
+        }
+        
+        else if (durum=="kaa"){
+        let ka_data = <%- JSON.stringify(weightgain) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Sırt Antrenman </p>
+    <pre> ${ka_data[0].sirt}</pre>
+`;    
+        }
+        else if(durum=="fka") {
+    let fk_data = <%- JSON.stringify(formprotection) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Form Korumaya Yönelik Sırt Antrenman </p>
+    <pre> ${fk_data[0].sirt}</pre>
+`;    
+        }
+        else
+        alert ("Amaç Belirleyiniz...")
+    }
+//------------------------------------------------------------------
+
+function omuz() {
+        if (durum=="kva"){
+        let kv_data = <%- JSON.stringify(losingweight) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Omuz Antrenman </p>
+    <pre> ${kv_data[0].omuz}</pre>
+`;    
+        }
+        
+        else if (durum=="kaa"){
+        let ka_data = <%- JSON.stringify(weightgain) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Omuz Antrenman </p>
+    <pre> ${ka_data[0].omuz}</pre>
+`;    
+        }
+        else if(durum=="fka") {
+    let fk_data = <%- JSON.stringify(formprotection) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Form Korumaya Yönelik Omuz Antrenman </p>
+    <pre> ${fk_data[0].omuz}</pre>
+`;    
+        }
+        else
+        alert ("Amaç Belirleyiniz...")
+    }
+//------------------------------------------------------------------
+
+function kol() {
+        if (durum=="kva"){
+        let kv_data = <%- JSON.stringify(losingweight) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Kol Antrenman </p>
+    <pre> ${kv_data[0].kol}</pre>
+`;    
+        }
+        
+        else if (durum=="kaa"){
+        let ka_data = <%- JSON.stringify(weightgain) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Kol Antrenman </p>
+    <pre> ${ka_data[0].kol}</pre>
+`;    
+        }
+        else if(durum=="fka") {
+    let fk_data = <%- JSON.stringify(formprotection) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Form Korumaya Yönelik Kol Antrenman </p>
+    <pre> ${fk_data[0].kol}</pre>
+`;    
+        }
+        else
+        alert ("Amaç Belirleyiniz...")
+    }
+//------------------------------------------------------------------
+
+function bacak() {
+        if (durum=="kva"){
+        let kv_data = <%- JSON.stringify(losingweight) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Bacak Antrenman </p>
+    <pre> ${kv_data[0].bacak}</pre>
+`;    
+        }
+        
+        else if (durum=="kaa"){
+        let ka_data = <%- JSON.stringify(weightgain) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Bacak Antrenman </p>
+    <pre> ${ka_data[0].bacak}</pre>
+`;    
+        }
+        else if(durum=="fka") {
+    let fk_data = <%- JSON.stringify(formprotection) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Form Korumaya Yönelik Bacak Antrenman </p>
+    <pre> ${fk_data[0].bacak}</pre>
+`;    
         }
         else
         alert ("Amaç Belirleyiniz...")
     }
 
-    function sirt() {
-        if (durum=="kva"){
-            console.log("kilo verme sırt")
-        }
-        else if (durum=="kaa"){
+    //------------------------------------------------------------------
 
+function karin() {
+        if (durum=="kva"){
+        let kv_data = <%- JSON.stringify(losingweight) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Karın Antrenman </p>
+    <pre> ${kv_data[0].karin}</pre>
+`;    
+        }
+        
+        else if (durum=="kaa"){
+        let ka_data = <%- JSON.stringify(weightgain) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Karın Antrenman </p>
+    <pre> ${ka_data[0].karin}</pre>
+`;    
         }
         else if(durum=="fka") {
-
-        }
-        else
-        alert ("Amaç Belirleyiniz...")
-    }  
-    
-    function omuz() {
-        if (durum=="kva"){
-
-        }
-        else if (durum=="kaa"){
-
-        }
-        else if(durum=="fka") {
-
-        }
-        else
-        alert ("Amaç Belirleyiniz...")
-    }  
-    
-    function kol() {
-        if (durum=="kva"){
-
-        }
-        else if (durum=="kaa"){
-
-        }
-        else if(durum=="fka") {
-
-        }
-        else
-        alert ("Amaç Belirleyiniz...")
-    }  
-    
-    function bacak() {
-        if (durum=="kva"){
-
-        }
-        else if (durum=="kaa"){
-
-        }
-        else if(durum=="fka") {
-
-        }
-        else
-        alert ("Amaç Belirleyiniz...")
-    }  
-    
-    function kardiyo() {
-        if (durum=="kva"){
-
-        }
-        else if (durum=="kaa"){
-
-        }
-        else if(durum=="fka") {
-
-        }
-        else
-        alert ("Amaç Belirleyiniz...")
-    }  
-    function karin() {
-        if (durum=="kva"){
-
-        }
-        else if (durum=="kaa"){
-
-        }
-        else if(durum=="fka") {
-
+    let fk_data = <%- JSON.stringify(formprotection) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Form Korumaya Yönelik Karın Antrenman </p>
+    <pre> ${fk_data[0].karin}</pre>
+`;    
         }
         else
         alert ("Amaç Belirleyiniz...")
     }
-    
-    function fullbody() {
+//------------------------------------------------------------------
+
+function kardiyo() {
         if (durum=="kva"){
-
+        let kv_data = <%- JSON.stringify(losingweight) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Kardiyo Antrenman </p>
+    <pre> ${kv_data[0].kardiyo}</pre>
+`;    
         }
+        
         else if (durum=="kaa"){
-
+        let ka_data = <%- JSON.stringify(weightgain) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Kardiyo Antrenman </p>
+    <pre> ${ka_data[0].kardiyo}</pre>
+`;    
         }
         else if(durum=="fka") {
-
+    let fk_data = <%- JSON.stringify(formprotection) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Form Korumaya Yönelik Kardiyo Antrenman </p>
+    <pre> ${fk_data[0].kardiyo}</pre>
+`;    
         }
         else
         alert ("Amaç Belirleyiniz...")
     }
+//------------------------------------------------------------------
 
-
+function fullbody() {
+        if (durum=="kva"){
+        let kv_data = <%- JSON.stringify(losingweight) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Full Body Antrenman </p>
+    <pre> ${kv_data[0].fullbody}</pre>
+`;    
+        }
+        
+        else if (durum=="kaa"){
+        let ka_data = <%- JSON.stringify(weightgain) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Full Body Antrenman </p>
+    <pre> ${ka_data[0].fullbody}</pre>
+`;    
+        }
+        else if(durum=="fka") {
+    let fk_data = <%- JSON.stringify(formprotection) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Form Korumaya Yönelik Full Body Antrenman </p>
+    <pre> ${fk_data[0].fullbody}</pre>
+`;    
+        }
+        else
+        alert ("Amaç Belirleyiniz...")
+    }
 
 </script>

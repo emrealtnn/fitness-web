@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/nutrition.css">
 
 </head>
 
@@ -43,13 +44,25 @@
                     <% } else { %> 
                         <a href="logout"><strong>Çıkış Yap</strong></a>
                         <% } %> 
-
-
                 </li>
            <li><a href="contact.html"><strong>İletişim</strong></a></li>  
         </ul>
         </nav>
     </header>
+
+    <center>
+        <div class="btn-group">
+         <button onclick="kvabes()" class="target">Kilo verme</button>
+            <button onclick="kaabes()" class="target">Kilo alma</button>
+            <button onclick="fkabes()" class="target">Form koruma</button>
+        </div>
+    </center>
+    
+    <center>
+    <div id="container"></div>
+
+    </center>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -62,3 +75,43 @@
 </body>
 
 </html>
+<script>
+
+$('button').on('click', function(){
+    $('button').removeClass('selected');
+    $(this).addClass('selected');
+});
+
+    function kvabes() {
+    let kv_data = <%- JSON.stringify(losingweight) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    
+    container.innerHTML+= `
+    <p> Kilo Vermeye Yönelik Beslenme Programı </p>
+    <pre> ${kv_data[0].beslenme}</pre>
+`;
+    
+    }
+    function kaabes() {
+    let ka_data = <%- JSON.stringify(weightgain) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p>Kilo Almaya Yönelik Beslenme Programı </p>
+    <pre> ${ka_data[0].beslenme}</pre>
+`;    
+
+    }
+    function fkabes() {
+    
+        let fk_data = <%- JSON.stringify(formprotection) %>;
+    const container = document.getElementById('container')
+    container.innerHTML='';
+    container.innerHTML+= `
+    <p> Form Korumaya Yönelik Beslenme Programı </p>
+    <pre> ${fk_data[0].beslenme}</pre>
+`;
+
+    }
+</script>

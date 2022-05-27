@@ -1,0 +1,44 @@
+.btn-group {
+    position: relative;
+    margin: auto;
+    margin-top: 3rem; 
+
+}
+.btn-group  button {
+  background-color: #F4511e; 
+  border: 1px solid #f2430e; 
+  color: white; /* White text */
+  margin-right: 1rem;
+  padding: 1.5rem 8rem; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  font-weight: bold;
+}
+
+.btn-group  button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+button.selected{
+  border-color: black;
+  background-color: white;
+  color: black;
+}
+#container {
+  margin: 2rem 5rem ;
+  padding: 1rem;
+}
+#container p,pre {
+  font-weight: bold;
+  font-family: 'Mukta', sans-serif;
+}
+#container p {
+  color: #F4511e;
+}

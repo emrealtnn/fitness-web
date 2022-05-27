@@ -8,7 +8,7 @@ const perinfoRoute = require('./routes/per-infoRoute');
 const suplementRoute = require('./routes/suplementRoute');
 const trainingRoute = require('./routes/trainingRoute');
 const cookieParser = require('cookie-parser');
-const { checkUser } = require('./middleware/authMiddleware');
+const { checkUser,getData } = require('./middleware/authMiddleware');
 const logoutRoute = require('./routes/logoutRoute');
 
 const app = express();
@@ -35,7 +35,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
    
 app.get('*', checkUser);
-
+app.get('*', getData);
 app.use(homeRoute,contactRoute,logregRoute,nutritionRoute,perinfoRoute,suplementRoute,trainingRoute,logoutRoute);
 
 app.listen(port, () => {

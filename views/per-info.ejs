@@ -73,14 +73,13 @@
                                     <center>
                                     <form action="POST" id="vki"></form>
                                     <label>Boyunuzu Giriniz(cm): </label>
-                                    <input type="number" id="boy" name="boy" placeholder="Örn: 170" required> <br>
+                                    <input type="number" id="boy" name="height" placeholder="Örn: 170" required> <br>
                                     <label>Kilonuzu giriniz(kg): </label>
-                                    <input type="number" id="kilo" name="kilo" placeholder="Örn: 70" required> <br>
-
-                                    <button id="hesapla" onclick="vkihesapla()">Hesapla</button> 
-                                    <button type="submit" id="kaydet">Kaydet</button><br>
+                                    <input type="number" id="kilo" name="weight" placeholder="Örn: 70" required> <br>
+                                    <button id="hesapla" onclick="vkihesapla()">Hesapla</button> <br>
                                     <h3 id="sonuc"> </h3>
                                     <h5 id="olcu"></h5>
+                                    <h6 id="oneri"></h6>
                                     </form> 
                                 </center>
                                 </div>
@@ -136,7 +135,7 @@
     <script>
         function vkihesapla() {
 
-            var boy = document.getElementById("boy1").value / 100;
+            var boy = document.getElementById("boy").value / 100;
             var kilo = document.getElementById("kilo").value;
 
             var b = Number(boy);
@@ -146,58 +145,31 @@
             document.getElementById("sonuc").innerHTML = "Vücut Kitle İndeksi:"
             document.getElementById("sonuc").innerHTML += ind.toFixed(2)
 
-            if (ind < 18)
+            if (ind < 18){
                 document.getElementById("olcu").innerHTML = "Zayıf";
-            else if (ind >= 18 && ind < 25)
+                document.getElementById("oneri").innerHTML= "Kilo alma programlarımıza bakabilirsiniz.";
+            }
+            else if (ind >= 18 && ind < 25){
                 document.getElementById("olcu").innerHTML = "Normal";
-            else if (ind >= 25 && ind < 30)
+                document.getElementById("oneri").innerHTML= "Form koruma programlarımıza bakabilirsiniz.";
+            }
+            else if (ind >= 25 && ind < 30){
                 document.getElementById("olcu").innerHTML = "Kilolu";
-            else if (ind >= 30 && ind < 40)
+                document.getElementById("oneri").innerHTML= "Kilo verme programlarımıza bakabilirsiniz.";
+            }
+            else if (ind >= 30 && ind < 40){
                 document.getElementById("olcu").innerHTML = "Obez";
-            else if (ind >= 40 && ind < 100)
+                document.getElementById("oneri").innerHTML= "Kilo verme programlarımıza bakabilirsiniz.";
+            }
+            else if (ind >= 40 && ind < 100){
                 document.getElementById("olcu").innerHTML = "İleri Derece Obez";
-            else
+                document.getElementById("oneri").innerHTML= "Kilo verme programlarımıza bakabilirsiniz.";
+            }
+            else {
                 document.getElementById("olcu").innerHTML = "Tekrar Deneyiniz...";
+            }
         }
     </script>
-    <!-- <script>
-        function vyohesapla() {
-
-            let radios = document.getElementsByName("cinsiyet");
-            let cinsiyet = ""
-            for (var i = 0; i < radios.length; i++) {
-                if (radios[i].checked) {
-                    // do whatever you want with the checked radio
-                    cinsiyet = radios[i].value;
-                    console.log(cinsiyet);
-                    break;
-                }
-            }
-
-            var boy = document.getElementById("boy2").value;
-            var boyun = document.getElementById("boyun").value;
-            var bel = document.getElementById("bel").value;
-            var kalca = document.getElementById("kalca").value;
-
-            if (cinsiyet == "Erkek") {
-                var vyo = 495 / [1.0324 - 0.19077 * Math.log(10)(bel - boyun) + 0.15456 * Math.log10(10) * (boy)] - 450
-                document.getElementById("sonuc2").innerHTML = "Vücut Yağ Oranı:"
-                document.getElementById("sonuc2").innerHTML += vyo.toFixed(2)
-            }
-            else if (cinsiyet == "Kadın") {
-                var vyo = 495 / [1.29579 - 0.35004 * Math.log(10) * (bel + kalca - boyun) + 0.22100 * Math.log(10) * (boy)] - 450
-                document.getElementById("sonuc2").innerHTML = "Vücut Yağ Oranı:"
-                document.getElementById("sonuc2").innerHTML += vyo.toFixed(2)
-            }
-            else
-                document.getElementById("sonuc2").innerHTML = "Bilgilerinizi kontrol ediniz..."
-
-
-        }
-
-
-
-    </script> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

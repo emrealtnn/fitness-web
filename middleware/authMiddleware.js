@@ -1,5 +1,9 @@
 const jwt = require('jsonwebtoken');
 const User = require("../models/User");
+const Formprotection = require("../models/formprotection");
+const Losingweight = require ("../models/losingweight");
+const Weightgain = require ("../models/weightgain");
+
 
 const requireAuth = (req, res, next) => {
     const token = req.cookies.jwt;
@@ -39,4 +43,19 @@ const checkUser = (req, res, next) => {
     }
 };
 
-module.exports = { requireAuth, checkUser };
+const getData = async (req,res,next) => {
+    try {
+        let formprotection = await Formprotection.find({});
+        let losingweight = await Losingweight.find({});
+        let weightgain = await Weightgain.find({});
+        res.locals.formprotection = formprotection;
+        res.locals.losingweight = losingweight;
+        res.locals.weightgain = weightgain;
+        console.log(res.locals.losingweight);
+        next();
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+module.exports = { requireAuth, checkUser, getData };

@@ -58,3 +58,18 @@ button.selected{
     background-color: #f2430e;
     color: #181818;
   }
+  #container {
+    position: relative;
+    display: inline-block;
+    margin: 2rem 5rem;
+    padding: 5rem;
+    float:right;
+    width: 60%;
+  }
+  #container p,pre {
+    font-weight: bold;
+    font-family: 'Mukta', sans-serif;
+  }
+  #container p {
+    color: #F4511e;
+  }
